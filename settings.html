@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexOrdo - Settings</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <h3>LexOrdo</h3>
+                <strong>Law Office</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#caseSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-folder"></i>
+                        Cases
+                    </a>
+                    <ul class="collapse list-unstyled" id="caseSubmenu">
+                        <li>
+                            <a href="cases.html">All Cases</a>
+                        </li>
+                        <li>
+                            <a href="add-case.html">Add New Case</a>
+                        </li>
+                        <li>
+                            <a href="#">Case Calendar</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#clientSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-users"></i>
+                        Clients
+                    </a>
+                    <ul class="collapse list-unstyled" id="clientSubmenu">
+                        <li>
+                            <a href="clients.html">Client List</a>
+                        </li>
+                        <li>
+                            <a href="add-client.html">Add New Client</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="calendar.html">
+                        <i class="fas fa-calendar"></i>
+                        Calendar
+                    </a>
+                </li>
+                <li>
+                    <a href="tasks.html">
+                        <i class="fas fa-tasks"></i>
+                        Tasks
+                    </a>
+                </li>
+                <li>
+                    <a href="reports.html">
+                        <i class="fas fa-chart-bar"></i>
+                        Reports
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-envelope"></i></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user-circle"></i> John Doe
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="container-fluid">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2>Settings</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Settings Navigation -->
+                    <div class="col-lg-3 mb-4">
+                        <div class="card shadow">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Settings Menu</h6>
+                            </div>
+                            <div class="list-group list-group-flush">
+                                <a href="#profile" class="list-group-item list-group-item-action active" data-bs-toggle="tab">Profile</a>
+                                <a href="#account" class="list-group-item list-group-item-action" data-bs-toggle="tab">Account</a>
+                                <a href="#security" class="list-group-item list-group-item-action" data-bs-toggle="tab">Security</a>
+                                <a href="#notifications" class="list-group-item list-group-item-action" data-bs-toggle="tab">Notifications</a>
+                                <a href="#firm" class="list-group-item list-group-item-action" data-bs-toggle="tab">Firm Settings</a>
+                                <a href="#billing" class="list-group-item list-group-item-action" data-bs-toggle="tab">Billing</a>
+                                <a href="#integrations" class="list-group-item list-group-item-action" data-bs-toggle="tab">Integrations</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Content -->
+                    <div class="col-lg-9 mb-4">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <!-- Profile Tab -->
+                                    <div class="tab-pane fade show active" id="profile">
+                                        <h5 class="card-title mb-4">Profile Settings</h5>
+                                        <form>
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <label for="firstName" class="form-label">First Name</label>
+                                                    <input type="text" class="form-control" id="firstName" value="John">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="lastName" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control" id="lastName" value="Doe">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="email" value="john.doe@example.com">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="phone" class="form-label">Phone</label>
+                                                <input type="tel" class="form-control" id="phone" value="+1 (555) 123-4567">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="position" class="form-label">Position</label>
+                                                <input type="text" class="form-control" id="position" value="Senior Attorney">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="bio" class="form-label">Bio</label>
+                                                <textarea class="form-control" id="bio" rows="3">Experienced attorney specializing in corporate law with over 10 years of practice.</textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="profilePhoto" class="form-label">Profile Photo</label>
+                                                <input class="form-control" type="file" id="profilePhoto">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                                        </form>
+                                    </div>
+
+                                    <!-- Account Tab -->
+                                    <div class="tab-pane fade" id="account">
+                                        <h5 class="card-title mb-4">Account Settings</h5>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="username" class="form-label">Username</label>
+                                                <input type="text" class="form-control" id="username" value="johndoe" disabled>
+                                                <div class="form-text">Username cannot be changed.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="language" class="form-label">Language</label>
+                                                <select class="form-select" id="language">
+                                                    <option selected>English</option>
+                                                    <option>Spanish</option>
+                                                    <option>French</option>
+                                                    <option>German</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="timezone" class="form-label">Timezone</label>
+                                                <select class="form-select" id="timezone">
+                                                    <option>(UTC-05:00) Eastern Time (US & Canada)</option>
+                                                    <option>(UTC-06:00) Central Time (US & Canada)</option>
+                                                    <option>(UTC-07:00) Mountain Time (US & Canada)</option>
+                                                    <option>(UTC-08:00) Pacific Time (US & Canada)</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="darkMode">
+                                                <label class="form-check-label" for="darkMode">Enable Dark Mode</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="emailNotifications" checked>
+                                                <label class="form-check-label" for="emailNotifications">Email Notifications</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Update Account Settings</button>
+                                        </form>
+                                    </div>
+
+                                    <!-- Security Tab -->
+                                    <div class="tab-pane fade" id="security">
+                                        <h5 class="card-title mb-4">Security Settings</h5>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="currentPassword" class="form-label">Current Password</label>
+                                                <input type="password" class="form-control" id="currentPassword">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="newPassword" class="form-label">New Password</label>
+                                                <input type="password" class="form-control" id="newPassword">
+                                                <div class="form-text">Password must be at least 8 characters long.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                                <input type="password" class="form-control" id="confirmPassword">
+                                            </div>
+                                            <div class="mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="twoFactorAuth">
+                                                    <label class="form-check-label" for="twoFactorAuth">
+                                                        Enable Two-Factor Authentication
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Update Security Settings</button>
+                                        </form>
+                                    </div>
+
+                                    <!-- Notifications Tab -->
+                                    <div class="tab-pane fade" id="notifications">
+                                        <h5 class="card-title mb-4">Notification Settings</h5>
+                                        <form>
+                                            <h6 class="mb-3">Email Notifications</h6>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="caseUpdates" checked>
+                                                <label class="form-check-label" for="caseUpdates">Case updates and changes</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="hearingReminders" checked>
+                                                <label class="form-check-label" for="hearingReminders">Hearing reminders</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="taskReminders" checked>
+                                                <label class="form-check-label" for="taskReminders">Task reminders</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="clientMessages">
+                                                <label class="form-check-label" for="clientMessages">Client messages</label>
+                                            </div>
+
+                                            <h6 class="mb-3 mt-4">In-App Notifications</h6>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="appCaseUpdates" checked>
+                                                <label class="form-check-label" for="appCaseUpdates">Case updates and changes</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="appHearingReminders" checked>
+                                                <label class="form-check-label" for="appHearingReminders">Hearing reminders</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="appTaskReminders" checked>
+                                                <label class="form-check-label" for="appTaskReminders">Task reminders</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="appClientMessages" checked>
+                                                <label class="form-check-label" for="appClientMessages">Client messages</label>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary mt-3">Update Notification Settings</button>
+                                        </form>
+                                    </div>
+
+                                    <!-- Firm Settings Tab -->
+                                    <div class="tab-pane fade" id="firm">
+                                        <h5 class="card-title mb-4">Firm Settings</h5>
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="firmName" class="form-label">Firm Name</label>
+                                                <input type="text" class="form-control" id="firmName" value="LexOrdo Law Office">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="firmAddress" class="form-label">Address</label>
+                                                <textarea class="form-control" id="firmAddress" rows="3">123 Legal Street, Suite 100
+New York, NY 10001</textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="firmPhone" class="form-label">Phone</label>
+                                                <input type="tel" class="form-control" id="firmPhone" value="+1 (212) 555-1234">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="firmEmail" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="firmEmail" value="contact@lexordo.com">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="firmWebsite" class="form-label">Website</label>
+                                                <input type="url" class="form-control" id="firmWebsite" value="https://www.lexordo.com">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="firmLogo" class="form-label">Firm Logo</label>
+                                                <input class="form-control" type="file" id="firmLogo">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Update Firm Settings</button>
+                                        </form>
+                                    </div>
+
+                                    <!-- Billing Tab -->
+                                    <div class="tab-pane fade" id="billing">
+                                        <h5 class="card-title mb-4">Billing Information</h5>
+                                        <div class="alert alert-info">
+                                            <i class="fas fa-info-circle me-2"></i> You're currently on the <strong>Professional</strong> plan.
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-md-6">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Current Plan</h5>
+                                                        <h2 class="card-text">Professional</h2>
+                                                        <p class="card-text">$49/month</p>
+                                                        <ul class="list-unstyled">
+                                                            <li><i class="fas fa-check text-success me-2"></i> 10 Users</li>
+                                                            <li><i class="fas fa-check text-success me-2"></i> Unlimited Cases</li>
+                                                            <li><i class="fas fa-check text-success me-2"></i> Advanced Reporting</li>
+                                                            <li><i class="fas fa-check text-success me-2"></i> Priority Support</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Billing Details</h5>
+                                                        <p class="card-text"><strong>Next Billing Date:</strong> July 15, 2023</p>
+                                                        <p class="card-text"><strong>Payment Method:</strong> Visa ending in 4242</p>
+                                                        <p class="card-text"><strong>Billing Email:</strong> accounting@lexordo.com</p>
+                                                        <button class="btn btn-outline-primary mt-2">Update Payment Method</button>
+                                                        <button class="btn btn-outline-secondary mt-2">View Invoices</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5 class="mb-3">Upgrade Plan</h5>
+                                        <div class="row">
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card">
+                                                    <div class="card-body text-center">
+                                                        <h5 class="card-title">Basic</h5>
+                                                        <h3 class="card-text">$29<small class="text-muted">/month</small></h3>
+                                                        <ul class="list-unstyled mt-3 mb-4">
+                                                            <li>3 Users</li>
+                                                            <li>50 Cases</li>
+                                                            <li>Basic Reporting</li>
+                                                            <li>Email Support</li>
+                                                        </ul>
+                                                        <button type="button" class="btn btn-outline-primary">Downgrade</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card border-primary">
+                                                    <div class="card-header bg-primary text-white">
+                                                        Current Plan
+                                                    </div>
+                                                    <div class="card-body text-center">
+                                                        <h5 class="card-title">Professional</h5>
+                                                        <h3 class="card-text">$49<small class="text-muted">/month</small></h3>
+                                                        <ul class="list-unstyled mt-3 mb-4">
+                                                            <li>10 Users</li>
+                                                            <li>Unlimited Cases</li>
+                                                            <li>Advanced Reporting</li>
+                                                            <li>Priority Support</li>
+                                                        </ul>
+                                                        <button type="button" class="btn btn-primary" disabled>Current Plan</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="card">
+                                                    <div class="card-body text-center">
+                                                        <h5 class="card-title">Enterprise</h5>
+                                                        <h3 class="card-text">$99<small class="text-muted">/month</small></h3>
+                                                        <ul class="list-unstyled mt-3 mb-4">
+                                                            <li>Unlimited Users</li>
+                                                            <li>Unlimited Cases</li>
+                                                            <li>Advanced Analytics</li>
+                                                            <li>24/7 Support</li>
+                                                        </ul>
+                                                        <button type="button" class="btn btn-primary">Upgrade</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Integrations Tab -->
+                                    <div class="tab-pane fade" id="integrations">
+                                        <h5 class="card-title mb-4">Integrations</h5>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center mb-3">
+                                                            <img src="https://via.placeholder.com/40" alt="Google Calendar" class="me-3">
+                                                            <h5 class="mb-0">Google Calendar</h5>
+                                                        </div>
+                                                        <p class="card-text">Sync your LexOrdo calendar with Google Calendar to manage all your events in one place.</p>
+                                                        <div class="form-check form-switch mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="googleCalendarSwitch" checked>
+                                                            <label class="form-check-label" for="googleCalendarSwitch">Enable Integration</label>
+                                                        </div>
+                                                        <button class="btn btn-outline-secondary">Configure</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center mb-3">
+                                                            <img src="https://via.placeholder.com/40" alt="Dropbox" class="me-3">
+                                                            <h5 class="mb-0">Dropbox</h5>
+                                                        </div>
+                                                        <p class="card-text">Connect with Dropbox to easily store and access case documents and files.</p>
+                                                        <div class="form-check form-switch mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="dropboxSwitch">
+                                                            <label class="form-check-label" for="dropboxSwitch">Enable Integration</label>
+                                                        </div>
+                                                        <button class="btn btn-outline-secondary">Connect</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center mb-3">
+                                                            <img src="https://via.placeholder.com/40" alt="QuickBooks" class="me-3">
+                                                            <h5 class="mb-0">QuickBooks</h5>
+                                                        </div>
+                                                        <p class="card-text">Sync billing and financial data with QuickBooks for seamless accounting.</p>
+                                                        <div class="form-check form-switch mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="quickbooksSwitch">
+                                                            <label class="form-check-label" for="quickbooksSwitch">Enable Integration</label>
+                                                        </div>
+                                                        <button class="btn btn-outline-secondary">Connect</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card h-100">
+                                                    <div class="card-body">
+                                                        <div class="d-flex align-items-center mb-3">
+                                                            <img src="https://via.placeholder.com/40" alt="Microsoft Office" class="me-3">
+                                                            <h5 class="mb-0">Microsoft Office 365</h5>
+                                                        </div>
+                                                        <p class="card-text">Integrate with Office 365 for email, calendar, and document collaboration.</p>
+                                                        <div class="form-check form-switch mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="officeSwitch">
+                                                            <label class="form-check-label" for="officeSwitch">Enable Integration</label>
+                                                        </div>
+                                                        <button class="btn btn-outline-secondary">Connect</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
